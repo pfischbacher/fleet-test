@@ -5,3 +5,11 @@ helm:
   chart: .
   valuesFiles:
     - abc.yaml
+
+targetCustomizations:
+  - name: abc-cloud
+    valuesFiles:
+      - abc-cloud.yaml
+    clusterSelector:
+      matchLabels:
+        env: abc
