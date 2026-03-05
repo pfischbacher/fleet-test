@@ -4,4 +4,4 @@ helm:
   releaseName: test
   chart: .
   valuesFiles:
-    - stgb.yaml
+    - abc.yaml
