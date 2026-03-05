@@ -1,0 +1,7 @@
+defaultNamespace: default
+
+helm:
+  releaseName: test
+  chart: .
+  valuesFiles:
+    - stgb.yaml

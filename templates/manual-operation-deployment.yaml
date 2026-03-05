@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.app.name }}
+  labels:
+    env: {{ .Values.environment }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "app.selectorLabels" . | nindent 6 }}
+  replicas: 1
+  progressDeadlineSeconds: 60
+  template:
+    metadata:
+      labels:
+        {{- include "app.labels" . | nindent 8 }}
+        enable.descheduler: "true"
+    spec:
+      containers:
+      - name: {{ .Values.app.name }}
+        image: nginx:latest
+        imagePullPolicy: Always
