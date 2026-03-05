@@ -8,8 +8,9 @@ helm:
 
 targetCustomizations:
   - name: abc-cloud
-    valuesFiles:
-      - abc-cloud.yaml
+    helm:
+      valuesFiles:
+        - abc-cloud.yaml
     clusterSelector:
       matchLabels:
         env: abc
