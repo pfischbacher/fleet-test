@@ -9,7 +9,6 @@ helm:
 targetCustomizations:
   - name: abc-cloud
     helm:
-      chart: .
       valuesFiles:
         - abc-cloud.yaml
     clusterSelector:
