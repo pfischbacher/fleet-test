@@ -4,4 +4,4 @@ helm:
   releaseName: test
   chart: .
   valuesFiles:
-    - abc.yaml
+    - abc-cloud.yaml
