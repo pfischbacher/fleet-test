@@ -2,7 +2,6 @@ defaultNamespace: default
 
 helm:
   releaseName: test
-  chart: .
   valuesFiles:
     - abc.yaml
 
