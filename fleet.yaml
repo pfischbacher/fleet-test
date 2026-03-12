@@ -3,7 +3,7 @@ defaultNamespace: default
 helm:
   releaseName: test
   valuesFiles:
-    - abc.yaml
+    - values.yaml
 
 targetCustomizations:
   - name: abc-cloud
