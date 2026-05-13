@@ -6,10 +6,14 @@ helm:
     - abc.yaml
 
 targetCustomizations:
-  - name: abc-cloud
-    helm:
-      valuesFiles:
-        - abc-cloud.yaml
-    clusterSelector:
-      matchLabels:
-        env: abc
+- name: cluster-a
+  helm:
+    valuesFiles:
+      - abc-cloud.yaml
+  clusterGroup: fleet-test-a
+
+- name: cluster-b
+  helm:
+    valuesFiles:
+      - abc-cloud.yaml
+  clusterGroup: fleet-test-b
