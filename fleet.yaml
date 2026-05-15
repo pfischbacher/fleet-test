@@ -1,5 +1,4 @@
 defaultNamespace: default
-name: test-1
 
 helm:
   releaseName: test
